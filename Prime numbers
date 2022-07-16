@@ -1,0 +1,39 @@
+// Print all the prime numbers as well as all the not prime numbers between 1 and the specified number.
+// This program can also be tweaked for just specifying whether the inputted number is prime or not.
+
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    int j = 2;
+    int i = 2;
+    
+    while(j<=n)
+    {
+        while(i<j)
+        {
+            if(j%i==0)
+            {
+                cout<<"Prime number: "<<j<<endl;
+                break;
+            }
+            else
+            {
+                cout<<"Not prime number: "<<j<<endl;
+                break;
+            }
+                
+            i = i+1;
+        }
+        
+        j = j+1;
+        
+    }
+    return 0;
+}
